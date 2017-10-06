@@ -35,7 +35,7 @@ function sizeMixin({size, width, theme}) {
       }
 
     }
-  }, theme.breakpoints);
+  }, theme.breakpoints.values);
 }
 
 function visibilityMixin({visible, theme}) {
@@ -51,7 +51,7 @@ function visibilityMixin({visible, theme}) {
     } else {
       return 'display: flex;';
     }
-  }, theme.breakpoints);
+  }, theme.breakpoints.values);
 }
 
 export default function(props) {

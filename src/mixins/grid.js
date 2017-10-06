@@ -11,7 +11,7 @@ function wrapMixin({wrap, reverse, theme}) {
     } else {
       return 'flex-wrap: wrap;';
     }
-  }, theme.breakpoints);
+  }, theme.breakpoints.values);
 }
 
 function directionMixin({reverse, theme}) {
@@ -21,7 +21,7 @@ function directionMixin({reverse, theme}) {
     return '';
   }
 
-  return map(reverse, (value = false) => `flex-direction: ${value && 'row-reverse' || 'row'};`, theme.breakpoints);
+  return map(reverse, (value = false) => `flex-direction: ${value && 'row-reverse' || 'row'};`, theme.breakpoints.values);
 }
 
 function justifyContentMixin({halign, horizontalAlign, reverse, theme}) {
@@ -72,7 +72,7 @@ function justifyContentMixin({halign, horizontalAlign, reverse, theme}) {
 
     }
     return `justify-content: ${rule};`
-  }, theme.breakpoints);
+  }, theme.breakpoints.values);
 };
 
 function alignItemsMixin({valign, verticalAlign, theme}) {
@@ -111,7 +111,7 @@ function alignItemsMixin({valign, verticalAlign, theme}) {
 
     }
     return `align-items: ${rule};`
-  }, theme.breakpoints);
+  }, theme.breakpoints.values);
 };
 
 export default function(props) {
